@@ -1,18 +1,18 @@
 {
   "manifest_version": 3,
-  "name":"Ad-Remover",
-  "version":"1.0",
-  "description":"유튜브 광고를 차단하고 쾌적한 시청 환경을 제공합니다.",
-  "permissions":[
+  "name": "Ad-Remover",
+  "version": "1.1",
+  "description": "유튜브 광고를 차단하고 쾌적한 시청 환경을 제공합니다.",
+  "permissions": [
     "declarativeNetRequest",
     "storage"
   ],
-  "host_permissions":[
+  "host_permissions": [
     "*://*.youtube.com/*",
     "*://*.googlevideo.com/*"
   ],
-  "declarative_net_request":{
-    "rule_resources":[
+  "declarative_net_request": {
+    "rule_resources": [
       {
         "id": "ruleset_1",
         "enabled": true,
@@ -28,7 +28,7 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_start"
+      "run_at": "document_idle"
     }
   ]
 }
